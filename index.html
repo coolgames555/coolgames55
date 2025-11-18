@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=200px, initial-scale=2.0">
     <title>MooGames</title>
-  <style> @keyframes moveBackground {
-  0% {
-    background-position: 0% 0%; /* Start at top-left */
-  }
-  50% {
-    background-position: 100% 100%; /* Move to bottom-right */
-  }
-  100% {
-    background-position: 0% 0%; /* Return to top-left */
-  }
+  <style>   body {
+    margin: 0; /* Remove default body margin */
+    overflow: hidden; /* Hide scrollbars if content overflows */
 }
 
-/* Apply the animation to an element */
-body { /* or any other element like a div */
-  background-image: url('image1.jpg'); /* Replace with your image */
-  background-size: cover; /* or contain, or specific dimensions */
-  background-repeat: repeat; /* or repeat if you want a pattern */
-  animation: moveBackground 10s infinite linear; /* Apply the animation */
+.scrolling-background {
+    width: 200%; /* Or a multiple of your background image width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('image1.jpg'); /* Replace with your image path */
+    background-repeat: repeat-x; /* Repeat horizontally */
+    background-size: auto 100%; /* Adjust as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: scrollBackground 20s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes scrollBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Half of the width of .scrolling-background */
+    }
 } </style>
+    <div class="scrolling-background"></div>
   
     <style>
         .rounded-rectangle {
