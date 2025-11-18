@@ -5,11 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=200px, initial-scale=2.0">
     <title>MooGames</title>
-  <style>{
-  background-image: url(https://img.freepik.com/free-vector/seamless-pattern_1159-5086.jpg?size=626&ext=jpg);
-  display: grid;
-  place-items: center;
-  animation: movingBackground 5s linear infinite;
+  <style> @keyframes moveBackground {
+  0% {
+    background-position: 0% 0%; /* Start at top-left */
+  }
+  50% {
+    background-position: 100% 100%; /* Move to bottom-right */
+  }
+  100% {
+    background-position: 0% 0%; /* Return to top-left */
+  }
+}
+
+/* Apply the animation to an element */
+body { /* or any other element like a div */
+  background-image: url('https://garden.spoonflower.com/c/11989227/p/f/m/rYYBFXFZw49WX0KLgA_cyx1Xszm4E2zHzT7ieMHpNWROyDuY37kG/Geometric%20Pattern%20Looped%20Hexagons%20Kerry%20(standard%20version).jpg'); /* Replace with your image */
+  background-size: cover; /* or contain, or specific dimensions */
+  background-repeat: repeat; /* or repeat if you want a pattern */
+  animation: moveBackground 10s infinite linear; /* Apply the animation */
 } </style>
   
     <style>
