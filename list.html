@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=200px, initial-scale=2.0">
+    <title>MooGames</title>
+    
+        <style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
 
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+     border-radius: 15px;
+  background-color: #2E2E2E;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a class="active" href="index.html">Home</a>
+    <a href="gamelist">All Games</a>
+  <a href="slope.html">Slope</a>
+  <a href="teris.html">Tetris</a>
+    <a href="minecraft.html">Minecraft</a>
+  <a href="smash-karts.html">Smash Karts</a>
+    <a href="drivemad.html">Drive Mad</a>
+    <a href="stkhk.html">Stickman Hook</a>
+    
+</div>
+
+
+
+</head>
+</body>
+</html>
